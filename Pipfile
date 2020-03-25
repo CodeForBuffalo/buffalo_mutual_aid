@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+wagtail = "*"
+whitenoise = "*"
+psycopg2 = "*"
+gunicorn = "*"
+django = "*"
+dj-database-url = "*"
+dj-static = "*"
+
+[requires]
+python_version = "3.8"

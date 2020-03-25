@@ -1,0 +1,138 @@
+{% load static wagtailuserbar %}
+{% load wagtailcore_tags %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title %}
+        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% endblock %}
+        {% block title_suffix %}
+        {% with self.get_site.site_name as site_name %}
+        {% if site_name %}- {{ site_name }}{% endif %}
+        {% endwith %}
+        {% endblock %}
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {# Global stylesheets #}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e8427b15fb.js" crossorigin="anonymous"></script>
+
+    {% block extra_css %}
+    {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% slugurl 'home' %}">
+                <img src="{% static 'img/bman_logo_alpha.png' %}" alt="" width="30" height="30" class="mr-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% slugurl 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="https://forms.gle/4RRA88qg22JZmDTN7">Request help</a>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Offer Help</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="https://forms.gle/yoV66eJC1d2dn54Z8">Sign up to provide
+                                aid</a>
+                            <a class="dropdown-item"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSceDUhVH6forlfh6An2uRXBYS4r-2Af17Z_Grik_tHf-jBgbA/viewform">Help
+                                provide childcare</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="" id="dropdown-contact" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Join Network</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-contact">
+                            <a class="dropdown-item"
+                                href="https://www.facebook.com/groups/740052889874229/permalink/740054249874093/">Join
+                                Facebook group</a>
+                            <a class="dropdown-item"
+                                href="https://discord.gg/HnkUf9?fbclid=IwAR10VF9ORXu8w5eTMmyyRRsDluqLuN03Fy2TOuCrzrwp-9TyJ1ezrHrl6hc">Join
+                                Discord Chat server</a>
+                            <a class="dropdown-item"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeVppqlR7ENYFS7H8Hrtnk_H9I7M8zh7nGl7BI4boHiTM4mPg/viewform?fbclid=IwAR2ZkzK-59sCW_IC567bL9Jd5bOoW42viwqF-So0qd9Wfy_ra6MAO3mrWE4">Volunteer
+                                for a leadership role</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="container-fluid mb-0 bg-light">
+        <div class="container font-small pt-5">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <img src="{% static 'img/bman_logo_alpha.png' %}" alt="" width="100" height="100" class="mb-5 mt-1">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <h5>Buffalo Mutual Aid Network</h5>
+                    <p><small>Buffalo Mutual Aid Network is a social action group for peer-to-peer
+                            organizing, humanitarian
+                            assistance, and reliable information sharing developed in response to the COVID-19 crisis.
+                        </small>
+                    </p>
+                    <p class="text-muted"><small>Cover photo by Perry Grone on Unsplash</small></p>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <h6>Contact us</h6>
+                        <li>
+                            <a href="https://www.facebook.com/groups/740052889874229/permalink/740054249874093/">Facebook
+                                Group</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://discord.gg/HnkUf9?fbclid=IwAR10VF9ORXu8w5eTMmyyRRsDluqLuN03Fy2TOuCrzrwp-9TyJ1ezrHrl6hc">Discord
+                                Chat</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container font-small text-center py-3 text-muted">
+            <p>&copy;Buffalo Mutual Aid Network 2020</p>
+        </div>
+    </footer>
+
+    {# Global javascript #}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    {% block extra_js %}
+    {# Override this in templates to add extra javascript #}
+    {% endblock %}
+</body>
+
+</html>
