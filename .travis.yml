@@ -1,0 +1,32 @@
+sudo: required
+
+language: python
+
+python:
+  - "3.7"
+
+before_install:
+  - pip install -U pip
+
+install:
+  - pip install pipenv
+  - pipenv sync --dev
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.cache/pipenv
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - python manage.py collectstatic --noinput
+  - python manage.py compress
+  - coverage run manage.py test -v 2
+
+after_script:
+  - coverage xml
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
