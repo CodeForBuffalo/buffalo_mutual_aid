@@ -16,7 +16,7 @@ COMPRESS_CSS_FILTERS = [
 ]
 COMPRESS_CSS_HASHING_METHOD = 'content'
 
-django_heroku.settings(locals())
+django_heroku.settings(locals(), logging=False)
 
 try:
     from .local import *
