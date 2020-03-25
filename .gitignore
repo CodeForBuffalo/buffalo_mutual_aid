@@ -129,3 +129,4 @@ dmypy.json
 
 # Local settings
 buffalomutualaid/settings/local.py
+staticfiles/
