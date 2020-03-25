@@ -1,6 +1,6 @@
 # Buffalo Mutual Aid Network
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/CodeForBuffalo/buffalo_mutual_aid?include_prereleases)
-[![Build Status](https://travis-ci.com/CodeForBuffalo/buffalo_mutual_aid.svg?branch=master)](https://travis-ci.com/CodeForBuffalo/buffalo_mutual_aid.svg?branch=master)
+[![Build Status](https://travis-ci.com/CodeForBuffalo/buffalomutualaid.svg?branch=master)](https://travis-ci.com/CodeForBuffalo/buffalomutualaid.svg?branch=master)
 ![GitHub](https://img.shields.io/github/license/CodeForBuffalo/buffalo_mutual_aid)
 
 
