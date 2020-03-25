@@ -24,7 +24,6 @@ before_script:
 
 script:
   - python manage.py collectstatic --noinput
-  - python manage.py compress
   - coverage run manage.py test -v 2
 
 after_script:
