@@ -1,5 +1,6 @@
 from .base import *
 import os
+import django_heroku
 
 DEBUG = False
 
@@ -14,6 +15,8 @@ COMPRESS_CSS_FILTERS = [
     'compressor.filters.cssmin.CSSMinFilter',
 ]
 COMPRESS_CSS_HASHING_METHOD = 'content'
+
+django_heroku.settings(locals())
 
 try:
     from .local import *
