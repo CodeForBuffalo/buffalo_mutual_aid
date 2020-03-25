@@ -1,5 +1,6 @@
 {% load static wagtailuserbar %}
 {% load wagtailcore_tags %}
+{% load %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -7,16 +8,30 @@
 <head>
     <meta charset="utf-8" />
     <title>
-        {% block title %}
-        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
-        {% endblock %}
-        {% block title_suffix %}
-        {% with self.get_site.site_name as site_name %}
-        {% if site_name %}- {{ site_name }}{% endif %}
-        {% endwith %}
-        {% endblock %}
+        Buffalo Mutual Aid Network
     </title>
-    <meta name="description" content="" />
+    <!-- Primary Meta Tags -->
+    <title>Buffalo Mutual Aid Network</title>
+    <meta name="title" content="Buffalo Mutual Aid Network">
+    <meta name="description"
+        content="Peer-to-peer aid during the COVID-19 crisis. Become a volunteer or request help from your community!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buffalomutualaid.org">
+    <meta property="og:title" content="Buffalo Mutual Aid Network">
+    <meta property="og:description"
+        content="Peer-to-peer aid during the COVID-19 crisis. Become a volunteer or request help from your community!">
+    <meta property="og:image" content="https://buffalomutualaid.org/static/img/volunteer.262337d85805.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://buffalomutualaid.org">
+    <meta property="twitter:title" content="Buffalo Mutual Aid Network">
+    <meta property="twitter:description"
+        content="Peer-to-peer aid during the COVID-19 crisis. Become a volunteer or request help from your community!">
+    <meta property="twitter:image" content="https://buffalomutualaid.org/static/img/volunteer.262337d85805.jpg">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {# Global stylesheets #}
@@ -43,7 +58,8 @@
             <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{% slugurl 'home' %}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link active" href="{% slugurl 'home' %}">Home <span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link" href="https://forms.gle/4RRA88qg22JZmDTN7">Request help</a>
@@ -102,16 +118,19 @@
                     <ul style="list-style-type: none; padding-left: 0;">
                         <h6>Contact us</h6>
                         <li>
-                            <a href="https://www.facebook.com/groups/740052889874229/permalink/740054249874093/" target="_blank"><i class="fab fa-facebook-square pr-2" style="color: #4c6ef5;"></i>Facebook
+                            <a href="https://www.facebook.com/groups/740052889874229/permalink/740054249874093/"
+                                target="_blank"><i class="fab fa-facebook-square pr-2"
+                                    style="color: #4c6ef5;"></i>Facebook
                                 Group</a>
                         </li>
                         <li>
-                            <a
-                                href="https://discord.gg/HnkUf9?fbclid=IwAR10VF9ORXu8w5eTMmyyRRsDluqLuN03Fy2TOuCrzrwp-9TyJ1ezrHrl6hc" target="_blank"><i class="fab fa-discord pr-2" style="color: #7289da;"></i>Discord
+                            <a href="https://discord.gg/HnkUf9?fbclid=IwAR10VF9ORXu8w5eTMmyyRRsDluqLuN03Fy2TOuCrzrwp-9TyJ1ezrHrl6hc"
+                                target="_blank"><i class="fab fa-discord pr-2" style="color: #7289da;"></i>Discord
                                 Chat</a>
                         </li>
                         <li>
-                            <a href="https://github.com/CodeForBuffalo/buffalo_mutual_aid" target="_blank"><i class="fab fa-github pr-2" style="color: #323131;"></i>Github</a>
+                            <a href="https://github.com/CodeForBuffalo/buffalo_mutual_aid" target="_blank"><i
+                                    class="fab fa-github pr-2" style="color: #323131;"></i>Github</a>
                         </li>
                     </ul>
                 </div>
