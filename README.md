@@ -1,5 +1,5 @@
 # Buffalo Mutual Aid Network
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/CodeForBuffalo/buffalomutualaid)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/CodeForBuffalo/buffalomutualaid?include_prereleases)
 [![Build Status](https://travis-ci.com/CodeForBuffalo/affordable_water.svg?branch=master)](https://travis-ci.com/CodeForBuffalo/buffalomutualaid)
 ![GitHub](https://img.shields.io/github/license/CodeForBuffalo/buffalomutualaid)
 
