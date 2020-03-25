@@ -1,7 +1,7 @@
 # Buffalo Mutual Aid Network
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/CodeForBuffalo/buffalomutualaid?include_prereleases)
-[![Build Status](https://travis-ci.com/CodeForBuffalo/buffalomutualaid.svg?branch=master)](https://travis-ci.com/CodeForBuffalo/buffalomutualaid.svg?branch=master)
-![GitHub](https://img.shields.io/github/license/CodeForBuffalo/buffalomutualaid)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/CodeForBuffalo/buffalo_mutual_aid?include_prereleases)
+[![Build Status](https://travis-ci.com/CodeForBuffalo/buffalo_mutual_aid.svg?branch=master)](https://travis-ci.com/CodeForBuffalo/buffalo_mutual_aid.svg?branch=master)
+![GitHub](https://img.shields.io/github/license/CodeForBuffalo/buffalo_mutual_aid)
 
 
 [Buffalo Mutual Aid Network](https://www.facebook.com/groups/740052889874229/about/) is a social action group for peer-to-peer organizing, humanitarian assistance, and reliable information sharing developed in response to the COVID-19 crisis.
