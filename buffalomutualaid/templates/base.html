@@ -153,6 +153,33 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
+    <!-- Facebook Pixel -->
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '174332900253945',
+                cookie: true,
+                xfbml: true,
+                version: '6.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     {% block extra_js %}
     {# Override this in templates to add extra javascript #}
     {% endblock %}
